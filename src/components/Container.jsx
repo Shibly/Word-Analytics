@@ -1,6 +1,7 @@
-import Stats from "./Stats";
-import Textarea from "./Textarea";
+import Stats from "./Stats.jsx";
+import Textarea from "./Textarea.jsx";
 import {useState} from "react";
+import {FACEBOOK_MAX_CHARACTERS, INSTAGRAM_MAX_CHARACTERS} from "../constants.js";
 
 export default function Container() {
 
@@ -9,8 +10,8 @@ export default function Container() {
     const stats = {
         numberOfWords: text.trim() === "" ? 0 : text.trim().split(/\s+/).length,
         numberOfCharacters: text.length,
-        instagramCharacterLeft: 200 - text.length,
-        facebookCharacterLeft: 2200 - text.length
+        instagramCharacterLeft: INSTAGRAM_MAX_CHARACTERS - text.length,
+        facebookCharacterLeft: FACEBOOK_MAX_CHARACTERS - text.length
     }
 
 

@@ -1,12 +1,62 @@
-# React + Vite
+# Word Analytics
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React application for analyzing word and character counts in your content, tailored for social media platforms like Facebook, Instagram, and more. Easily check if your text fits platform-specific limits before posting.
 
-Currently, two official plugins are available:
+## Features
+- Paste or type your content to analyze instantly
+- See word and character counts in real-time
+- Platform-specific limits for Facebook, Instagram, and others
+- Warnings when limits are exceeded
+- Clean, responsive UI
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo
+![App Screenshot](public/vite.svg)
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/word-analytics.git
+   cd word-analytics
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+   The app will be available at `http://localhost:5173`.
+
+## Usage
+- Paste or type your content into the textarea.
+- Select the desired social media platform.
+- Instantly view word and character counts, and see if your content fits the platform's limits.
+
+## Technologies Used
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+## Folder Structure
+```
+src/
+  assets/         # Images and icons
+  components/     # Reusable React components
+  constants.js    # Platform limits and constants
+  App.jsx         # Main app component
+  main.jsx        # Entry point
+  App.css         # App styles
+```
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request for improvements or new features.
+
+## License
+This project is licensed under the MIT License.
+
+## Contact
+For questions or feedback, please contact [your-email@example.com].
+

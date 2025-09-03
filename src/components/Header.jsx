@@ -1,5 +1,5 @@
-import BackgroundImage from "./BackgroundImage";
-import H1 from "./H1";
+import BackgroundImage from "./BackgroundImage.jsx";
+import H1 from "./H1.jsx";
 
 export default function Header() {
   return (
