@@ -16,7 +16,7 @@ A modern React application for analyzing word and character counts in your conte
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/word-analytics.git
+   git clone https://github.com/Shibly/word-analytics.git
    cd word-analytics
    ```
 2. **Install dependencies:**
