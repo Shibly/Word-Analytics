@@ -1,10 +1,10 @@
-export default function Stats({numberOfCharacter, instagramCharacterLeft, facebookCharacterLeft, numberOfWords}) {
+export default function Stats({stats}) {
     return (
         <section className="stats">
-            <Stat number={numberOfWords} label="Words"/>
-            <Stat number={numberOfCharacter} label="Characters"/>
-            <Stat number={instagramCharacterLeft} label="Instagram"/>
-            <Stat number={facebookCharacterLeft} label="Facebook"/>
+            <Stat number={stats.numberOfWords} label="Words"/>
+            <Stat number={stats.numberOfCharacters} label="Characters"/>
+            <Stat number={stats.instagramCharacterLeft} label="Instagram"/>
+            <Stat number={stats.facebookCharacterLeft} label="Facebook"/>
 
         </section>
 
@@ -15,7 +15,7 @@ export default function Stats({numberOfCharacter, instagramCharacterLeft, facebo
 function Stat({number, label}) {
     return (
         <section className="stat">
-            <span className="stat__number">{number}</span>
+            <span className={number > 0 ? 'stat__number' : 'stat__number--limit'}>{number}</span>
             <h2 className="second-heading">{label}</h2>
         </section>
 

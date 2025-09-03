@@ -5,20 +5,19 @@ import {useState} from "react";
 export default function Container() {
 
     const [text, setText] = useState("")
-    const numberOfCharacter = text.length;
 
-    const instagramCharacterLeft = 280 - numberOfCharacter;
-    const facebookCharacterLeft = 2200 - numberOfCharacter;
-    const numberOfWords = text.trim() === "" ? 0 : text.trim().split(/\s+/).length;
+    const stats = {
+        numberOfWords: text.trim() === "" ? 0 : text.trim().split(/\s+/).length,
+        numberOfCharacters: text.length,
+        instagramCharacterLeft: 200 - text.length,
+        facebookCharacterLeft: 2200 - text.length
+    }
+
 
     return (
         <main className="container">
             <Textarea text={text} setText={setText}/>
-            <Stats
-                numberOfCharacter={numberOfCharacter}
-                numberOfWords={numberOfWords}
-                instagramCharacterLeft={instagramCharacterLeft}
-                facebookCharacterLeft={facebookCharacterLeft}/>
+            <Stats stats={stats}/>
         </main>
     );
 }
