@@ -1,10 +1,10 @@
-export default function Stats() {
+export default function Stats({numberOfCharacter, instagramCharacterLeft, facebookCharacterLeft, numberOfWords}) {
     return (
         <section className="stats">
-            <Stat number={0} label="Words"/>
-            <Stat number={0} label="Characters"/>
-            <Stat number={280} label="Instagram"/>
-            <Stat number={2200} label="Facebook"/>
+            <Stat number={numberOfWords} label="Words"/>
+            <Stat number={numberOfCharacter} label="Characters"/>
+            <Stat number={instagramCharacterLeft} label="Instagram"/>
+            <Stat number={facebookCharacterLeft} label="Facebook"/>
 
         </section>
 
@@ -12,7 +12,7 @@ export default function Stats() {
 
 }
 
-function Stat({label, number}) {
+function Stat({number, label}) {
     return (
         <section className="stat">
             <span className="stat__number">{number}</span>
